@@ -3,10 +3,17 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require("express-session");
+require("dotenv").config();
 
 //
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var loginRouter = require('./routes/login');
+var signupRouter = require('./routes/signup');
+var timeRouter = require('./routes/time');
+var reservationRouter = require('./routes/reservation');
+var mypageRouter = require('./routes/mypage');
 
 var app = express();
 
@@ -39,6 +46,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 //
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/login', loginRouter);
+app.use('/signup', signupRouter);
+app.use('/time', timeRouter);
+app.use('/reservation', reservationRouter);
+app.use('/mypage', mypageRouter);
 
 
 

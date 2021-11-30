@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>YGMGV</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        nav {
+            padding-left: 200px;
+            padding-top: 50px;
+        }
+        
+        a {
+            text-decoration: none;
+            padding: 20px; 
+        }
+
+        a:link{
+            color : black;
+
+        }
+        
+        img {
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px rgb(198, 198, 198);
+            margin-left: 20px;
+                margin-right: 20px;
+        }
+
+        h2 {
+            display: inline;
+            padding-right: 670px;
+        }
+
+        #title{
+            padding-left: 550px;
+            padding-top: 130px;
+        }
+
+        #idTitle{
+            padding-left: 550px;
+        }
+
+        hr{
+            width: 35%;
+        }
+
+        h4{
+            padding-top: 35px;
+        }
+
+        #idInputBox::placeholder {
+            color: gray;
+        }
+
+        #idInputBox {
+            padding-left: 560px;
+            outline: none;
+        }
+
+
+        button{
+            margin-top: 60px;
+            color: #fff;
+            background:black;
+            border-radius: 7px; 
+            width: 35%;
+            height: 50px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <nav>
+            <a onclick="window.location.href='/'"><h2>YGMGV</h2></a>
+            <a>상영시간표</a>
+            <a onclick="window.location.href='reservation'">영화 예매</a>
+            <a onclick="window.location.href='login'">Login/SignUp</a>
+            <a onclick="window.location.href='mypage'">예매기록</a>
+        </nav>
+    </header>
+    <div>
+        <h1 id="title">Login</h1>
+        <h4 id="idTitle">아이디</h4>
+        <p><input id="idInputBox" type="text" name="name" placeholder='아이디를 입력하세요.' style="border:0 solid black;" ></p>
+        <hr style="border:solid 1px black;">
+        <h4 id="idTitle">비밀번호</h4>
+        <p><input id="idInputBox" type="text" name="name" placeholder='비밀번호를 입력하세요.' style="border:0 solid black;" ></p>
+        <hr style="border:solid 1px black;">
+        <center>
+            <button onclick="window.location.href='main'">로그인하기</button>
+            <a onclick="window.location.href='login'" style="color: gray;">아직 계정이 없으신가요?</a>
+        </center>
+    </div>
+</body>
+</html>
