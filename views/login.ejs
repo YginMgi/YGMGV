@@ -80,24 +80,25 @@
     <header>
         <nav>
             <a onclick="window.location.href='/'"><h2>YGMGV</h2></a>
-            <a>상영시간표</a>
-            <a onclick="window.location.href='reservation'">영화 예매</a>
-            <a onclick="window.location.href='login'">Login/SignUp</a>
-            <a onclick="window.location.href='mypage'">예매기록</a>
+            <a onclick="window.location.href='/time'">상영시간표</a>
+            <a onclick="window.location.href='/reservation'">영화 예매</a>
+            <a onclick="window.location.href='/users/login'">Login/SignUp</a>
+            <a onclick="window.location.href='/mypage'">예매기록</a>
         </nav>
     </header>
-    <div>
+    <form method="post">
         <h1 id="title">Login</h1>
         <h4 id="idTitle">아이디</h4>
-        <p><input id="idInputBox" type="text" name="name" placeholder='아이디를 입력하세요.' style="border:0 solid black;" ></p>
+        <input id="idInputBox" type="text" name="userId" placeholder='아이디를 입력하세요.' style="border:0 solid black;" required >
         <hr style="border:solid 1px black;">
+
         <h4 id="idTitle">비밀번호</h4>
-        <p><input id="idInputBox" type="text" name="name" placeholder='비밀번호를 입력하세요.' style="border:0 solid black;" ></p>
+        <input id="idInputBox" type="password" name="password" placeholder='비밀번호를 입력하세요.' style="border:0 solid black;" required>
         <hr style="border:solid 1px black;">
         <center>
-            <button onclick="window.location.href='main'">로그인하기</button>
-            <a onclick="window.location.href='login'" style="color: gray;">아직 계정이 없으신가요?</a>
+            <button type="submit" value="로그인">로그인하기</button><br><br>
+            <a onclick="window.location.href='/users/signup'" style="color: gray;">아직 계정이 없으신가요?</a>
         </center>
-    </div>
+    </form>
 </body>
 </html>
