@@ -1,25 +1,28 @@
 var express = require('express');
 var router = express.Router();
 var models = require("../models");
-var bcrypt = require("bcrypt");
+
+
 
 router.post("/login", async (req, res, next) => {
   console.log(req.body);
   if (req.body.userId && req.body.password) {
-    const data = models.User.findAll({
+    const data = await models.User.findAll({
       where: {
         userId: req.body.userId,
       },
     });
+    console.log(data);
     if (!data[0]) {
       res.send({ msg: "존재하지 않는 사용자 입니다." });
       return;
     }
-    const comparePassword = bcrypt.compare(data.password, req.body.password, () => {});
-    if (comparePassword) {
+    //const comparePassword = bcrypt.compare(data.password, req.body.password, () => {});
+    if (req.body.password) {
       console.log("로그인 성공");
-      req.session.userId = data[0].userId;
-      req.session.name = data[0].name;
+      // req.session.isLogin = true;
+      // req.session.userId = data[0].userId;
+      // req.session.name = data[0].name;
       res.redirect("/");
     } else {
       res.send({ msg: "비밀번호가 잘못되었습니다." });
@@ -45,10 +48,11 @@ router.post("/signup",async(req,res,next)=> {
       console.log("해당 유저가 존재!");
       res.send({ error: "이미 존재하는 이메일" });
     } else {
-      const encryptedPassword = bcrypt.hashSync(req.body.password, 10);
+      //const encryptedPassword = bcrypt.hashSync(req.body.password, 10);
       const user =  models.User.create({
         userId: req.body.userId,
-        password: encryptedPassword,
+        //password: encryptedPassword,
+        password: req.body.password,
         name: req.body.name,
       });
       console.log("회원가입 완료");
@@ -64,8 +68,9 @@ router.post("/signup",async(req,res,next)=> {
 });
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/logout', function(req, res, next) {
+  req.session.destroy();
+  res.redirect("/");
 });
 
 module.exports = router;
