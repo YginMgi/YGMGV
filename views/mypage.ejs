@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>YGMGV</title>
+    <form autocomplete=off></form>
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        nav {
+            padding-left: 200px;
+            padding-top: 50px;
+        }
+        
+        a {
+            text-decoration: none;
+            padding: 20px; 
+            font-weight: bold;
+        }
+
+        a:link{
+            color : black;
+
+        }
+
+        h2 {
+            display: inline;
+            padding-right: 670px;
+        }
+
+        img{
+            margin-top: 100px;
+            width: 80%;
+        }
+
+        button {
+            background-color: transparent;
+            border-width: 0px;
+            width: 30%;
+            cursor: hand;
+            position: absolute;
+            background-color:transparent;
+            border-width: 0px;
+        }
+
+        button.btm_image1{
+            left: 30px;
+        }
+
+        button.btm_image2{
+            left: 565px;
+        }
+
+        button.btm_image3{
+            left: 1030px;
+        }
+
+        #img_btn1{
+            margin-left: 70px;
+        }
+
+        h3, h4, h5{
+            display: inline;
+            position: absolute;
+            cursor: hand;
+            text-align: center;
+        }
+
+        #testdiv{
+            position : relative;
+        }
+
+        .images {
+            padding-bottom: 20px;
+            padding-top: 150px;
+        }
+
+        img.movieImage {
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px rgb(198, 198, 198);
+            margin-left: 20px;
+            margin-right: 20px;
+            width: 15%;
+            position: absolute;
+            z-index: 1;
+        }
+
+        h3.movie1{top: 140px; left: 317px;}
+        h3.movie2{top: 140px; left: 780px;}
+        h3.movie3{top: 140px; left: 1247px;}
+
+        h4.theater1{ top: 590px; left: 240px; }
+        h4.theater2{ top: 590px; left: 710px; }
+        h4.theater3{ top: 590px; left: 1175px; }
+
+        h5.seat1{ top: 620px; left: 238px; }
+        h5.seat2{ top: 620px; left: 709px; }
+        h5.seat3{ top: 620px; left: 1175px; }
+
+        h4.time1{ top: 610px; left: 420px; }
+        h4.time2{ top: 610px; left: 880px; }
+        h4.time3{ top: 610px; left: 1345px; }
+
+        #movieImage1{ top: 110px; left: 205px; }
+        #movieImage2{ top: 110px; left: 670px; }
+        #movieImage3{ top: 110px; left: 1134px; }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <nav>
+            <a onclick="window.location.href='/'"><h2>YGMGV</h2></a>
+            <a onclick="window.location.href='time'">상영시간표</a>
+            <a onclick="window.location.href='reservation'">영화 예매</a>
+            <a onclick="window.location.href='/users/login'">Login/SignUp</a>
+            <a>My Page</a>
+        </nav>
+    </header>
+    <div>
+
+
+        <div id="testdiv">
+            <img class = "movieImage" id="movieImage1" src="https://user-images.githubusercontent.com/71479613/142095528-6494aafc-d32e-46e1-9f15-40c28aa1c76a.png">
+            <img class = "movieImage" id="movieImage2" src="https://user-images.githubusercontent.com/71479613/142095528-6494aafc-d32e-46e1-9f15-40c28aa1c76a.png">
+            <img class = "movieImage" id="movieImage3" src="https://user-images.githubusercontent.com/71479613/142095528-6494aafc-d32e-46e1-9f15-40c28aa1c76a.png">
+
+            <button type="button" class="btm_image1" id="img_btn1"><img src="https://user-images.githubusercontent.com/71479613/144434172-88d81b00-816f-403c-9a89-b19b40f80390.png"></button>
+            <button type="button" class="btm_image2" id="img_btn2"><img src="https://user-images.githubusercontent.com/71479613/144434172-88d81b00-816f-403c-9a89-b19b40f80390.png"></button>
+            <button type="button" class="btm_image3" id="img_btn3"><img src="https://user-images.githubusercontent.com/71479613/144434172-88d81b00-816f-403c-9a89-b19b40f80390.png"></button>    
+
+            <h3 class="movie1">영화이름1</h3>
+            <h3 class="movie2">영화이름2</h3>
+            <h3 class="movie3">영화이름3</h3>
+
+            <h5 class="seat1">좌석이름1</h5>
+            <h5 class="seat2">좌석이름2</h5>
+            <h5 class="seat3">좌석이름3</h5>
+
+            <h4 class="theater1">관이름1</h4>
+            <h4 class="theater2">관이름2</h4>
+            <h4 class="theater3">관이름3</h4>
+
+            <h4 class="time1">시간1</h4>
+            <h4 class="time2">시간2</h4>
+            <h4 class="time3">시간3</h4>
+        </div>
+    </div>
+</body>
+</html>

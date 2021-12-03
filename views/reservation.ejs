@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>YGMGV</title>
+    <form autocomplete=off></form>
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        nav {
+            padding-left: 200px;
+            padding-top: 50px;
+        }
+        
+        a {
+            text-decoration: none;
+            padding: 20px; 
+        }
+
+        a:link{
+            color : black;
+
+        }
+
+        h2 {
+            display: inline;
+            padding-right: 670px;
+        }
+
+        #title{
+            padding-left: 550px;
+            padding-top: 80px;
+        }
+
+        #idTitle{
+            padding-left: 550px;
+        }
+
+        hr{
+            width: 35%;
+        }
+
+        
+
+        h4{
+            padding-top: 35px;
+        }
+
+        #idInputBox::placeholder {
+            color: gray;
+        }
+
+        #idInputBox {
+            padding-left: 560px;
+            outline: none;
+            width: 30%;
+            
+        }
+
+        img{
+            margin-top: 100px;
+        }
+
+        #testImg{
+            position : relative;
+        }
+
+        button {
+            width: 100px;
+            height: 100px;
+            cursor: hand;
+            position: absolute;
+            background-color:transparent;
+            border-width: 0px;
+            font-weight: bold;
+            font-size: medium;
+        }
+
+        button.cancleButton{
+            color: #fff;
+            background:black;
+            border-radius: 7px; 
+            width: 20%;
+            height: 50px;
+            top: 800px;
+            left: 310px;
+        }
+
+        button.resButton{
+            color: #fff;
+            background:black;
+            border-radius: 7px; 
+            width: 20%;
+            height: 50px;
+            top: 800px;
+            left: 1100px;
+        }
+
+        button.btnA1{top: 205px;left: 315px;}
+
+        button.btnA2{top: 205px;left: 413px;}
+
+        button.btnA3{top: 205px;left: 550px;}
+
+        button.btnA4{top: 205px;left: 650px;}
+
+        button.btnA5{top: 205px;left: 757px;}
+
+        button.btnA6{top: 205px;left: 860px;}
+
+        button.btnA7{top: 205px;left: 960px;}
+
+        button.btnA8{top: 205px;left: 1060px;}
+
+        button.btnA9{top: 205px;left: 1200px;}
+
+        button.btnA10{top: 205px;left: 1300px;}
+/* btn BBBBBBBBBBBBBBBBBBBBBBBBBB */
+        button.btnB1{top: 372px;left: 315px;}
+
+        button.btnB2{top: 372px;left: 413px;}
+
+        button.btnB3{top: 372px;left: 550px;}
+
+        button.btnB4{top: 372px;left: 650px;}
+
+        button.btnB5{top: 372px;left: 757px;}
+
+        button.btnB6{top: 372px;left: 860px;}
+
+        button.btnB7{top: 372px;left: 960px;}
+
+        button.btnB8{top: 372px;left: 1060px;}
+
+        button.btnB9{top: 372px;left: 1200px;}
+
+        button.btnB10{top: 372px;left: 1300px;}
+/* btn CCCCCCCCCCCCCCCCCCCCC */
+        button.btnC1{top: 535px;left: 315px;}
+
+        button.btnC2{top: 535px;left: 413px;}
+
+        button.btnC3{top: 535px;left: 550px; }
+
+        button.btnC4{top: 535px;left: 650px;}
+
+        button.btnC5{top: 535px;left: 757px;}
+
+        button.btnC6{top: 535px;left: 860px;}
+
+        button.btnC7{top: 535px;left: 960px;}
+
+        button.btnC8{top: 535px;left: 1060px;}
+
+        button.btnC9{ top: 535px; left: 1200px; }
+
+        button.btnC10{ top: 535px; left: 1300px; }
+
+        button.adultMinus{ top: 92px; left: 985px; }
+
+        button.adultCount{ top: 94px; left: 1030px; }
+
+        button.adultAdd{ top: 94px; left: 1080px; }
+
+        button.babyMinus{ top: 92px; left: 1240px; }
+
+        button.babyCount{ top: 94px; left: 1285px; }
+
+        button.babyAdd{ top: 94px; left: 1333px; }
+        
+        button.movieName{ top: 100px; left: 180px; width: 25%;}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <nav>
+            <a onclick="window.location.href='/'"><h2>YGMGV</h2></a>
+            <a onclick="window.location.href='time'">상영시간표</a>
+            <a>영화 예매</a>
+            <a onclick="window.location.href='/users/login'">Login/SignUp</a>
+            <a onclick="window.location.href='mypage'">My Page</a>
+        </nav>
+    </header>
+    <div>
+        <div id="testImg">
+            <center>
+                <img width=70% src="https://user-images.githubusercontent.com/71479613/144371001-1295abce-b34e-4c65-8882-cfc36a733fe6.png">
+            </center>
+
+            <button class="movieName" type="button" onclick="javascript:sensorBtnClick('');"><h1>영화이름</h1></button>
+
+            <button class="adultMinus" type="button" onclick="javascript:sensorBtnClick('adultMinus');">-</button>
+            <button class="adultCount" type="button" onclick="javascript:sensorBtnClick('adultCount');">0</button>
+            <button class="adultAdd" type="button" onclick="javascript:sensorBtnClick('adultAdd');">+</button>
+
+            <button class="babyMinus" type="button" onclick="javascript:sensorBtnClick('babyMinus');">-</button>
+            <button class="babyCount" type="button" onclick="javascript:sensorBtnClick('babyCount');">0</button>
+            <button class="babyAdd" type="button" onclick="javascript:sensorBtnClick('babyAdd');">+</button>
+
+            <button class="btnA1" type="button" onclick="javascript:sensorBtnClick('btnA1');">1</button>
+            <button class="btnA2" type="button" onclick="javascript:sensorBtnClick('btnA2');">2</button>
+            <button class="btnA3" type="button" onclick="javascript:sensorBtnClick('btnA3');">3</button>
+            <button class="btnA4" type="button" onclick="javascript:sensorBtnClick('btnA4');">4</button>
+            <button class="btnA5" type="button" onclick="javascript:sensorBtnClick('btnA5');">5</button>
+            <button class="btnA6" type="button" onclick="javascript:sensorBtnClick('btnA6');">6</button>
+            <button class="btnA7" type="button" onclick="javascript:sensorBtnClick('btnA7');">7</button>
+            <button class="btnA8" type="button" onclick="javascript:sensorBtnClick('btnA8');">8</button>
+            <button class="btnA9" type="button" onclick="javascript:sensorBtnClick('btnA9');">9</button>
+            <button class="btnA10" type="button" onclick="javascript:sensorBtnClick('btnA10');">10</button>
+            
+            <button class="btnB1" type="button" onclick="javascript:sensorBtnClick('btnB1');">1</button>
+            <button class="btnB2" type="button" onclick="javascript:sensorBtnClick('btnB2');">2</button>
+            <button class="btnB3" type="button" onclick="javascript:sensorBtnClick('btnB3');">3</button>
+            <button class="btnB4" type="button" onclick="javascript:sensorBtnClick('btnB4');">4</button>
+            <button class="btnB5" type="button" onclick="javascript:sensorBtnClick('btnB5');">5</button>
+            <button class="btnB6" type="button" onclick="javascript:sensorBtnClick('btnB6');">6</button>
+            <button class="btnB7" type="button" onclick="javascript:sensorBtnClick('btnB7');">7</button>
+            <button class="btnB8" type="button" onclick="javascript:sensorBtnClick('btnB8');">8</button>
+            <button class="btnB9" type="button" onclick="javascript:sensorBtnClick('btnB9');">9</button>
+            <button class="btnB10" type="button" onclick="javascript:sensorBtnClick('btnB10');">10</button>
+    
+            <button class="btnC1" type="button" onclick="javascript:sensorBtnClick('btnC1');">1</button>
+            <button class="btnC2" type="button" onclick="javascript:sensorBtnClick('btnC2');">2</button>
+            <button class="btnC3" type="button" onclick="javascript:sensorBtnClick('btnC3');">3</button>
+            <button class="btnC4" type="button" onclick="javascript:sensorBtnClick('btnC4');">4</button>
+            <button class="btnC5" type="button" onclick="javascript:sensorBtnClick('btnC5');">5</button>
+            <button class="btnC6" type="button" onclick="javascript:sensorBtnClick('btnC6');">6</button>
+            <button class="btnC7" type="button" onclick="javascript:sensorBtnClick('btnC7');">7</button>
+            <button class="btnC8" type="button" onclick="javascript:sensorBtnClick('btnC8');">8</button>
+            <button class="btnC9" type="button" onclick="javascript:sensorBtnClick('btnC9');">9</button>
+            <button class="btnC10" type="button" onclick="javascript:sensorBtnClick('btnC10');">10</button>
+        </div>
+
+        <button class="cancleButton" type="button" onclick="javascript:sensorBtnClick('cancleButton');">취소하기</button>
+        <button class="resButton" type="button" onclick="javascript:sensorBtnClick('resButton');">예매하기</button>
+
+    </div>
+</body>
+</html>
