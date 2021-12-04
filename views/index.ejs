@@ -62,7 +62,11 @@
             <a><h2>YGMGV</h2></a>
             <a onclick="window.location.href='time'">상영시간표</a>
             <a onclick="window.location.href='reservation'">영화 예매</a>
+            <%if(!isLogin){%>
             <a onclick="window.location.href='/users/login'">Login/SignUp</a>
+            <%}else{%>
+                <a><%=name%>님</a>
+            <%}%>
             <a onclick="window.location.href='mypage'">예매기록</a>
         </nav>
         <center>

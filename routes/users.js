@@ -20,9 +20,9 @@ router.post("/login", async (req, res, next) => {
     //const comparePassword = bcrypt.compare(data.password, req.body.password, () => {});
     if (req.body.password) {
       console.log("로그인 성공");
-      // req.session.isLogin = true;
-      // req.session.userId = data[0].userId;
-      // req.session.name = data[0].name;
+      req.session.isLogin = true;
+      req.session.userId = data[0].userId;
+      req.session.name = data[0].name;
       res.redirect("/");
     } else {
       res.send({ msg: "비밀번호가 잘못되었습니다." });
@@ -57,9 +57,9 @@ router.post("/signup",async(req,res,next)=> {
       });
       console.log("회원가입 완료");
       //회원가입 완료후 토큰 생성
-      // req.session.isLogin = true;
-      // req.session.userId = user.userId;
-      // req.session.name = user.name;
+      req.session.isLogin = true;
+      req.session.userId = user.userId;
+      req.session.name = user.name;
       res.redirect("/");
     }
   } else {
