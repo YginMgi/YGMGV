@@ -15,8 +15,9 @@
         
         a {
             text-decoration: none;
-            padding: 20px; 
+            padding: 0px; 
         }
+
 
         a:link{
             color : black;
@@ -74,6 +75,18 @@
             margin-left: 20px;
             margin-right: 20px;
         }
+
+        .menu1{
+            padding-left: 220px;
+        }
+        .menu3{
+            padding-left: 50px;
+        }
+        .menu2{
+            padding-left: 50px;
+            font-weight: bold;
+        }
+
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -83,10 +96,9 @@
     <header>
         <nav>
             <a onclick="window.location.href='/'"><h2>YGMGV</h2></a>
-            <a onclick="window.location.href='/time'">상영시간표</a>
-            <a onclick="window.location.href='/reservation'">영화 예매</a>
-            <a onclick="window.location.href='/login'">Login/SignUp</a>
-            <a onclick="window.location.href='/mypage'">예매기록</a>
+            <a onclick="window.location.href='time'" class = 'menu1'>상영시간표</a>
+            <a class = 'menu2'>Login/SignUp</a>
+            <a onclick="window.location.href='mypage'" class = 'menu3'>My Page</a>
         </nav>
     </header>
     <form method="post">
