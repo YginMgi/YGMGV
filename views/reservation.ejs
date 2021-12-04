@@ -15,8 +15,10 @@
         
         a {
             text-decoration: none;
-            padding: 20px; 
+            padding: 0px; 
         }
+
+    
 
         a:link{
             color : black;
@@ -171,6 +173,14 @@
         
         button.movieName{ top: 100px; left: 180px; width: 25%;}
 
+        .menu1{
+            padding-left: 220px;
+        }
+        .menu2,.menu3{
+            padding-left: 50px;
+        }
+
+
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -180,10 +190,10 @@
     <header>
         <nav>
             <a onclick="window.location.href='/'"><h2>YGMGV</h2></a>
-            <a onclick="window.location.href='time'">상영시간표</a>
-            <a>영화 예매</a>
-            <a onclick="window.location.href='/users/login'">Login/SignUp</a>
-            <a onclick="window.location.href='mypage'">My Page</a>
+            <a onclick="window.location.href='time'" class = 'menu1'>상영시간표</a>
+            <!-- <a onclick="window.location.href='reservation'">영화 예매</a> -->
+            <a onclick="window.location.href='/users/login'" class = 'menu2'>Login/SignUp</a>
+            <a onclick="window.location.href='mypage'" class = 'menu3'>My Page</a>
         </nav>
     </header>
     <div>

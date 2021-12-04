@@ -14,7 +14,8 @@
         
         a {
             text-decoration: none;
-            padding: 20px; 
+            padding: 0px; 
+            /* font-weight: bold; */
         }
 
         a:link{
@@ -47,7 +48,14 @@
 
         .images {
             padding-bottom: 20px;
-            padding-top: 150px;
+            padding-top: 110px;
+        }
+
+        .menu1{
+            padding-left: 220px;
+        }
+        .menu2,.menu3{
+            padding-left: 50px;
         }
 
     </style>
@@ -60,27 +68,21 @@
     <header>
         <nav>
             <a><h2>YGMGV</h2></a>
-            <a onclick="window.location.href='time'">상영시간표</a>
-            <a onclick="window.location.href='reservation'">영화 예매</a>
-            <%if(!isLogin){%>
-            <a onclick="window.location.href='/users/login'">Login/SignUp</a>
-            <%}else{%>
-                <a><%=name%>님</a>
-            <%}%>
-            <a onclick="window.location.href='mypage'">예매기록</a>
+            <a onclick="window.location.href='time'" class = 'menu1'>상영시간표</a>
+            <!-- <a onclick="window.location.href='reservation'">영화 예매</a> -->
+            <a onclick="window.location.href='/users/login'" class = 'menu2'>Login/SignUp</a>
+            <a onclick="window.location.href='mypage'" class = 'menu3'>My Page</a>
         </nav>
         <center>
             <div class="images">
-                <img width="300" src="https://user-images.githubusercontent.com/71479613/142095528-6494aafc-d32e-46e1-9f15-40c28aa1c76a.png">
-                <img width="300" src="https://user-images.githubusercontent.com/71479613/142095528-6494aafc-d32e-46e1-9f15-40c28aa1c76a.png">
-                <img width="300" src="https://user-images.githubusercontent.com/71479613/142095528-6494aafc-d32e-46e1-9f15-40c28aa1c76a.png">
-                <img width="300" src="https://user-images.githubusercontent.com/71479613/142095528-6494aafc-d32e-46e1-9f15-40c28aa1c76a.png">
-            </div>
+                <img width="300" src="https://user-images.githubusercontent.com/71479613/144706962-3512236f-a24b-47e5-a78e-9cd169e8afc1.png">                <img width="300" src="https://user-images.githubusercontent.com/71479613/144706690-f6c9a606-8e51-447b-9b3c-a9d188d48407.png">                
+                <img width="300" src="https://user-images.githubusercontent.com/71479613/144706855-e1b8b957-a042-46b0-9a64-d0a289bffd7a.png">            
+                <img width="300" src="https://user-images.githubusercontent.com/71479613/144706913-e1442571-a7df-4ba9-a764-4fc86d604d1c.png">            </div>
             <div>
-                <button onclick="window.location.href=''">예매하기</button>
-                <button onclick="window.location.href=''">예매하기</button>
-                <button onclick="window.location.href=''">예매하기</button>
-                <button onclick="window.location.href=''">예매하기</button>
+                <button onclick="window.location.href='/time'">예매하기</button>
+                <button onclick="window.location.href='/time'">예매하기</button>
+                <button onclick="window.location.href='/time'">예매하기</button>
+                <button onclick="window.location.href='/reservation'">예매하기</button>
             </div>
 
         </center>
