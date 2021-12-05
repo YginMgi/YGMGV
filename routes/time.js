@@ -3,7 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('time');
+  res.render("time", {
+    isLogin: req.session.isLogin,
+    name: req.session.name,
+  });
 });
 
 module.exports = router;

@@ -130,7 +130,11 @@
         <nav>
             <a onclick="window.location.href='/'"><h2>YGMGV</h2></a>
             <a onclick="window.location.href='time'" class = 'menu1'>상영시간표</a>
-            <a onclick="window.location.href='login'" class = 'menu2'>Login/SignUp</a>
+            <% if(!isLogin){ %>
+                <a onclick="window.location.href='/users/login'" class = 'menu2'>Login/SignUp</a>
+            <% }else{ %>
+                <a class = "menu2"> <%= name %>님, 안녕하세요</a>
+            <% } %>
             <a  class = 'menu3'>My Page</a>
         </nav>
     </header>
