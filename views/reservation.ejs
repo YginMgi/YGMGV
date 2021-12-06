@@ -15,10 +15,8 @@
         
         a {
             text-decoration: none;
-            padding: 0px; 
+            padding: 20px; 
         }
-
-    
 
         a:link{
             color : black;
@@ -61,7 +59,8 @@
         }
 
         img{
-            margin-top: 100px;
+            margin-top: 190px;
+            margin-left: 40px;
         }
 
         #testImg{
@@ -77,6 +76,36 @@
             border-width: 0px;
             font-weight: bold;
             font-size: medium;
+        }
+
+        h2.seat, h4{
+            position: absolute;
+            font-weight: bold;
+        }
+
+        h4.selectedTime{
+            top: 90px;
+            left: 1363px;
+        }
+
+        h4.selectedTheater{
+            top: 90px;
+            left: 1320px;
+        }
+
+        #seatA{
+            left: 260px;
+            top: 220px;
+        }
+
+        #seatB{
+            left: 260px;
+            top: 390px;
+        }
+
+        #seatC{
+            left: 260px;
+            top: 555px;
         }
 
         button.cancleButton{
@@ -158,28 +187,35 @@
         button.btnC9{ top: 535px; left: 1200px; }
 
         button.btnC10{ top: 535px; left: 1300px; }
-
-        button.adultMinus{ top: 92px; left: 985px; }
-
-        button.adultCount{ top: 94px; left: 1030px; }
-
-        button.adultAdd{ top: 94px; left: 1080px; }
-
-        button.babyMinus{ top: 92px; left: 1240px; }
-
-        button.babyCount{ top: 94px; left: 1285px; }
-
-        button.babyAdd{ top: 94px; left: 1333px; }
         
-        button.movieName{ top: 100px; left: 180px; width: 25%;}
+        button.movieName{ top: 100px; left: 160px; width: 25%;}
+
+        img.seatInfoBox{
+            position: absolute;
+            top: 456px;
+            left: 830px;
+        }
+
+        #seatTitle{
+            position: absolute;
+            top: 680px;
+            left: 900px;
+            width: 100px;
+            outline: none;
+            text-align: center;
+        }
 
         .menu1{
-            padding-left: 220px;
+            padding-left: 100px;
         }
-        .menu2,.menu3{
+        .menu2,.menu4{
             padding-left: 50px;
         }
 
+        .menu3{
+            font-weight: bold;
+            padding-left: 50px;
+        }
 
     </style>
     <meta charset="UTF-8">
@@ -191,30 +227,29 @@
         <nav>
             <a onclick="window.location.href='/'"><h2>YGMGV</h2></a>
             <a onclick="window.location.href='time'" class = 'menu1'>상영시간표</a>
-            <!-- <a onclick="window.location.href='reservation'">영화 예매</a> -->
+            <a onclick="window.location.href='mypage'" class = 'menu3'>My Page</a>
             <% if(!isLogin){ %>
                 <a onclick="window.location.href='/users/login'" class = 'menu2'>Login/SignUp</a>
             <% }else{ %>
                 <a class = "menu2"> <%= name %>님, 안녕하세요</a>
+                <a onclick="window.location.href='/users/logout'" class = "menu4">로그아웃</a>
             <% } %>
-            <a onclick="window.location.href='mypage'" class = 'menu3'>My Page</a>
         </nav>
     </header>
     <div>
         <div id="testImg">
             <center>
-                <img width=70% src="https://user-images.githubusercontent.com/71479613/144371001-1295abce-b34e-4c65-8882-cfc36a733fe6.png">
+                <img width=68.5% src="https://user-images.githubusercontent.com/71479613/144734714-9b5c8d14-d517-4fc9-a786-df460c596eb0.png">
             </center>
 
-            <button class="movieName" type="button" onclick="javascript:sensorBtnClick('');"><h1>영화이름</h1></button>
+            <button class="movieName" type="button" onclick="javascript:sensorBtnClick('');"><h1><%= movieId %></h1></button>
 
-            <button class="adultMinus" type="button" onclick="javascript:sensorBtnClick('adultMinus');">-</button>
-            <button class="adultCount" type="button" onclick="javascript:sensorBtnClick('adultCount');">0</button>
-            <button class="adultAdd" type="button" onclick="javascript:sensorBtnClick('adultAdd');">+</button>
+            <h2 class="seat" id="seatA">A</h2>
+            <h2 class="seat" id="seatB">B</h2>
+            <h2 class="seat" id="seatC">C</h2>
 
-            <button class="babyMinus" type="button" onclick="javascript:sensorBtnClick('babyMinus');">-</button>
-            <button class="babyCount" type="button" onclick="javascript:sensorBtnClick('babyCount');">0</button>
-            <button class="babyAdd" type="button" onclick="javascript:sensorBtnClick('babyAdd');">+</button>
+            <h4 class="selectedTheater"><%= theater %></h4>
+            <h4 class="selectedTime"><%= time %></h4>
 
             <button class="btnA1" type="button" onclick="javascript:sensorBtnClick('btnA1');">1</button>
             <button class="btnA2" type="button" onclick="javascript:sensorBtnClick('btnA2');">2</button>
@@ -248,11 +283,14 @@
             <button class="btnC8" type="button" onclick="javascript:sensorBtnClick('btnC8');">8</button>
             <button class="btnC9" type="button" onclick="javascript:sensorBtnClick('btnC9');">9</button>
             <button class="btnC10" type="button" onclick="javascript:sensorBtnClick('btnC10');">10</button>
+            <img class = "seatInfoBox" width="168" src="https://user-images.githubusercontent.com/71479613/144774988-a4035c59-50d9-4d92-808c-0413b0421dbb.png">
+
+            <input autocomplete=off id="seatTitle" type="text" name="seat" placeholder='좌석' style="border:0 solid black;" required>
+            
         </div>
 
         <button class="cancleButton" type="button" onclick="javascript:sensorBtnClick('cancleButton');">취소하기</button>
         <button class="resButton" type="button" onclick="javascript:sensorBtnClick('resButton');">예매하기</button>
-
     </div>
 </body>
 </html>

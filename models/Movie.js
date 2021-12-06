@@ -12,10 +12,6 @@ class Movie extends Sequelize.Model {
           allowNull: false,
           primaryKey: true
         },
-        title: {
-          type: Sequelize.STRING(100),
-          allowNull: false
-        },
         time:{
             type: Sequelize.DATE, 
             allowNull: false  

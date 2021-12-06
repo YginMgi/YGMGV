@@ -17,9 +17,7 @@
 
         a {
             text-decoration: none;
-            padding: 0px; 
         }
-
 
         a:link{
             color : black;
@@ -41,8 +39,31 @@
             font-weight: bold;
         }
 
+        h1, h4, h5{
+            position: absolute;
+            font-weight: bold;
+        }
+
+        h4{
+            color: white;
+        }
+
+        h4.movie1{ left: 530px; top: 128px; }
+        h4.movie2{ left: 518px; top: 316px; }
+        h4.movie3{ left: 520px; top: 504px; }
+
+        h1.theater1{ left: 340px; top: 170px; }
+        h1.theater2{ left: 340px; top: 359px; }
+        h1.theater3{ left: 340px; top: 539px; }
+
         #testImg{
             position : relative;
+        }
+
+        img{
+            position: absolute;
+            left: 430px;
+            top: 110px;
         }
         
         button.btn1 {
@@ -135,33 +156,83 @@
             left : 1157px;
         }
 
-        .menu1{
-            padding-left: 220px;
-            font-weight: bold;
-        }
-        .menu2,.menu3{
-            padding-left: 50px;
+        img.resInfoBox{
+            top: 700px;
+            left: 500px;
         }
 
+        button.resInfoSubmitButton{
+            color: #fff;
+            background:black;
+            border-radius: 7px; 
+            width: 10%;
+            height: 50px;
+            top: 717px;
+            left: 1000px;
+        }
+
+        #theaterTitle{
+            position: absolute;
+            top: 732px;
+            left: 550px;
+            width: 50px;
+            outline: none;
+            text-align: center;
+        }
+
+        #timeTitle{
+            position: absolute;
+            top: 732px;
+            left: 683px;
+            width: 50px;
+            outline: none;
+            text-align: center;
+        }
+
+        #movieTitle{
+            position: absolute;
+            top: 732px;
+            left: 830px;
+            width: 100px;
+            outline: none;
+            text-align: center;
+        }
+
+        .menu1{
+            padding-left: 100px;
+            font-weight: bold;
+
+        }
+        .menu2,.menu3,.menu4{
+            padding-left: 50px;
+        }
     </style>
 </head>
 <body>
     <nav>
         <a onclick="window.location.href='/'"><h2>YGMGV</h2></a>
-            <a class = 'menu1'>상영시간표</a>
-            <!-- <a onclick="window.location.href='reservation'">영화 예매</a> -->
-            <% if(!isLogin){ %>
-                <a onclick="window.location.href='/users/login'" class = 'menu2'>Login/SignUp</a>
-            <% }else{ %>
-                <a class = "menu2"> <%= name %>님, 안녕하세요</a>
-            <% } %>
-            <a onclick="window.location.href='mypage'" class = 'menu3'>My Page</a>
+        <a onclick="window.location.href='time'" class = 'menu1'>상영시간표</a>
+        <a onclick="window.location.href='mypage'" class = 'menu3'>My Page</a>
+        <% if(!isLogin){ %>
+            <a onclick="window.location.href='/users/login'" class = 'menu2'>Login/SignUp</a>
+        <% }else{ %>
+            <a class = "menu2"> <%= name %>님, 안녕하세요</a>
+            <a onclick="window.location.href='/users/logout'" class = "menu4">로그아웃</a>
+        <% } %>
     </nav>
-
         <div id="testImg">
             <center>
-                <img width="1400" alt="스크린샷 2021-11-18 오전 9 02 34" src="https://user-images.githubusercontent.com/71479613/142301625-6b3085d9-4735-4497-936f-038763426d02.png">
+                <img width="890" src="https://user-images.githubusercontent.com/71479613/144731741-d77cb91e-6be5-4f93-81e2-69e8fc3c752b.png">
             </center>
+
+            <h4 class="movie1">태일이</h4>
+            <h4 class="movie2">유체이탈자</h4>
+            <h4 class="movie3">이터널스</h4>
+
+            <h1 class="theater1">A관</h1>
+            <h1 class="theater2">B관</h1>
+            <h1 class="theater3">C관</h1>
+
             <button class="btn1" type="button" onclick="javascript:sensorBtnClick('btn1');">09:00</button>
             <button class="btn2" type="button" onclick="javascript:sensorBtnClick('btn2');">12:00</button>
             <button class="btn3" type="button" onclick="javascript:sensorBtnClick('btn3');">03:00</button>
@@ -182,6 +253,13 @@
             <button class="btn16" type="button" onclick="javascript:sensorBtnClick('btn16');">06:00</button>
             <button class="btn17" type="button" onclick="javascript:sensorBtnClick('btn17');">09:00</button>
             <button class="btn18" type="button" onclick="javascript:sensorBtnClick('btn18');">12:00</button>
-          </div>
+
+            <img class="resInfoBox" width="500" src="https://user-images.githubusercontent.com/71479613/144773491-552bc66f-f63a-4ccd-b2a7-1a1317bbb2e4.png">
+            <button class="resInfoSubmitButton" type="button" >예매하기</button>
+
+            <input autocomplete=off id="theaterTitle" type="text" name="theater" placeholder='관' style="border:0 solid black;" required>
+            <input autocomplete=off id="timeTitle" type="text" name="time" placeholder='시간' style="border:0 solid black;" required>
+            <input autocomplete=off id="movieTitle" type="text" name="movieId" placeholder='영화이름' style="border:0 solid black;" required>
+        </div>
 </body>
 </html>

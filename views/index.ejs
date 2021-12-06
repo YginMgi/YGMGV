@@ -52,9 +52,9 @@
         }
 
         .menu1{
-            padding-left: 220px;
+            padding-left: 100px;
         }
-        .menu2,.menu3{
+        .menu2,.menu3,.menu4{
             padding-left: 50px;
         }
 
@@ -69,13 +69,13 @@
         <nav>
             <a><h2>YGMGV</h2></a>
             <a onclick="window.location.href='time'" class = 'menu1'>상영시간표</a>
-            <!-- <a onclick="window.location.href='reservation'">영화 예매</a> -->
+            <a onclick="window.location.href='mypage'" class = 'menu3'>My Page</a>
             <% if(!isLogin){ %>
             <a onclick="window.location.href='/users/login'" class = 'menu2'>Login/SignUp</a>
             <% }else{ %>
             <a class = "menu2"> <%= name %>님, 안녕하세요</a>
+            <a onclick="window.location.href='/users/logout'" class = "menu4">로그아웃</a>
             <% } %>
-            <a onclick="window.location.href='mypage'" class = 'menu3'>My Page</a>
         </nav>
         <center>
             <div class="images">
