@@ -284,13 +284,15 @@
             <button class="btnC9" type="button" onclick="javascript:sensorBtnClick('btnC9');">9</button>
             <button class="btnC10" type="button" onclick="javascript:sensorBtnClick('btnC10');">10</button>
             <img class = "seatInfoBox" width="168" src="https://user-images.githubusercontent.com/71479613/144774988-a4035c59-50d9-4d92-808c-0413b0421dbb.png">
-
+        <form method="post">
             <input autocomplete=off id="seatTitle" type="text" name="seat" placeholder='좌석' style="border:0 solid black;" required>
             
+            <button class="cancleButton" type="button" onclick="javascript:sensorBtnClick('cancleButton');">취소하기</button>
+            <button class="resButton" type="submit" onclick="javascript:sensorBtnClick('resButton');">예매하기</button>
+        </form>
         </div>
 
-        <button class="cancleButton" type="button" onclick="javascript:sensorBtnClick('cancleButton');">취소하기</button>
-        <button class="resButton" type="button" onclick="javascript:sensorBtnClick('resButton');">예매하기</button>
+       
     </div>
 </body>
 </html>

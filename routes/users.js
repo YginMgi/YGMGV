@@ -57,7 +57,7 @@ router.post("/signup",async(req,res,next)=> {
       });
       console.log("회원가입 완료");
       //회원가입 완료후 토큰 생성
-      req.session.isLogin = true;
+      req.session.isLogin = false;
       req.session.userId = user.userId;
       req.session.name = user.name;
       res.redirect("/");

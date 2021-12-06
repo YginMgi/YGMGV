@@ -5,9 +5,10 @@ class Reservation extends Sequelize.Model {
     return super.init(
       {
         reservationId: {
-            type: Sequelize.STRING(20), 
-            allowNull: false,
-            primaryKey: true
+            type: Sequelize.INTEGER, 
+            autoIncrement:true,
+            primaryKey: true,
+
           },
         seat: {
             type: Sequelize.STRING(20), 

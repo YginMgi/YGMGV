@@ -8,12 +8,12 @@ class Movie extends Sequelize.Model {
     return super.init(
       {
         movieId: {
-          type: Sequelize.STRING(20), 
+          type: Sequelize.STRING(45), 
           allowNull: false,
           primaryKey: true
         },
         time:{
-            type: Sequelize.DATE, 
+            type: Sequelize.STRING(45), 
             allowNull: false  
         },
         theater:{

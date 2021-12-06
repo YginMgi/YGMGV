@@ -254,12 +254,15 @@
             <button class="btn17" type="button" onclick="javascript:sensorBtnClick('btn17');">09:00</button>
             <button class="btn18" type="button" onclick="javascript:sensorBtnClick('btn18');">12:00</button>
 
-            <img class="resInfoBox" width="500" src="https://user-images.githubusercontent.com/71479613/144773491-552bc66f-f63a-4ccd-b2a7-1a1317bbb2e4.png">
-            <button class="resInfoSubmitButton" type="button" >예매하기</button>
+            <form method="post">
+                <img class="resInfoBox" width="500" src="https://user-images.githubusercontent.com/71479613/144773491-552bc66f-f63a-4ccd-b2a7-1a1317bbb2e4.png">
+                <button class="resInfoSubmitButton" type="submit"  >예매하기</button>
 
-            <input autocomplete=off id="theaterTitle" type="text" name="theater" placeholder='관' style="border:0 solid black;" required>
-            <input autocomplete=off id="timeTitle" type="text" name="time" placeholder='시간' style="border:0 solid black;" required>
-            <input autocomplete=off id="movieTitle" type="text" name="movieId" placeholder='영화이름' style="border:0 solid black;" required>
+            
+                <input autocomplete=off id="theaterTitle" type="text" name="theater" placeholder='관' style="border:0 solid black;" required>
+                <input autocomplete=off id="timeTitle" type="text" name="time" placeholder='시간' style="border:0 solid black;" required>
+                <input autocomplete=off id="movieTitle" type="text" name="movieId" placeholder='영화이름' style="border:0 solid black;" required>
+            </form>
         </div>
 </body>
 </html>
