@@ -5,14 +5,14 @@ var models = require("../models");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  const data =  models.Movie.findAll();
-  console.log(data[0]);
-  res.render("reservation", {
+  res.render('reservation', {
     isLogin: req.session.isLogin,
     name: req.session.name,
-    movieId: data[0].movieId,
-    time: data[0].time,
-    theater: data[0].theater,
+    val:{
+      movieId: req.session.movieId,
+      time: req.session.time,
+      theater: req.session.theater
+    }
   });
 });
 

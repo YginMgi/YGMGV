@@ -13,14 +13,13 @@ router.get('/', function(req, res, next) {
 
 router.post("/",async(req,res,next)=> {
   console.log(req.body);
-    const movie =  models.Movie.create({
+    const movie =  await models.Movie.create({
       movieId: req.body.movieId,
       time: req.body.time,
       theater: req.body.theater,
     });
-    
-    console.log("시간 선택 완료");
-    req.session.movieId = movie.movieId
+
+    req.session.movieId = movie.movieId;
     req.session.time = movie.time;
     req.session.theater = movie.theater;
     res.redirect("/reservation");

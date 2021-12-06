@@ -242,14 +242,13 @@
                 <img width=68.5% src="https://user-images.githubusercontent.com/71479613/144734714-9b5c8d14-d517-4fc9-a786-df460c596eb0.png">
             </center>
 
-            <button class="movieName" type="button" onclick="javascript:sensorBtnClick('');"><h1><%= movieId %></h1></button>
-
+            <button class="movieName" type="button" onclick="javascript:sensorBtnClick('');"><h1><%= val.movieId%></h1>
             <h2 class="seat" id="seatA">A</h2>
             <h2 class="seat" id="seatB">B</h2>
             <h2 class="seat" id="seatC">C</h2>
 
-            <h4 class="selectedTheater"><%= theater %></h4>
-            <h4 class="selectedTime"><%= time %></h4>
+            <h4 class="selectedTheater"><%= val.theater%></h4>
+            <h4 class="selectedTime"><%= val.time%></h4>
 
             <button class="btnA1" type="button" onclick="javascript:sensorBtnClick('btnA1');">1</button>
             <button class="btnA2" type="button" onclick="javascript:sensorBtnClick('btnA2');">2</button>
